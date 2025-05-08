@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# VS Code
+.vscode/
+
+# Nightwatch generated stuff
+tests_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
