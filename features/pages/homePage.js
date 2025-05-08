@@ -17,11 +17,6 @@ module.exports = {
             await this.waitForXpathVisible(xpath, `The header text ${headerText} is not visible`);
         },
 
-        async verifySubHeaderText(subHeaderText) {
-            const xpath = xpaths.template.homePageSubHeader(subHeaderText);
-            await this.waitForXpathVisible(xpath, `The subheader text ${subHeaderText} is not visible`);
-        },
-
         async verifyFooterText(footerText) {
             const xpath = xpaths.template.homePageFooter(footerText);
             await this.waitForXpathVisible(xpath, `The footer text ${footerText} is not visible`);

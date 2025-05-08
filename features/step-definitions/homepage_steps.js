@@ -12,10 +12,6 @@ Then(/^the Main Homepage Header text is "([^"]*)"$/, async (headerText) => {
   await getHomepage().verifyHeaderText(headerText);
 });
 
-Then(/^the Main Homepage Sub-header text is "([^"]*)"$/, async(subHeaderText) => {
-  await getHomepage().verifySubHeaderText(subHeaderText);
-})
-
 Then(/^the page title should contain "([^"]*)"$/, async (titlePart) => {
   await browser.assert.titleContains(titlePart);
 });
