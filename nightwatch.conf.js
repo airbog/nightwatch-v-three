@@ -20,6 +20,7 @@ module.exports = {
   test_settings: {
     default: {
       desiredCapabilities: {
+        abortOnAssertionFailure: true,
         browserName: 'chrome',
         chromeOptions: {
           args: ['--no-sandbox', '--disable-gpu']
