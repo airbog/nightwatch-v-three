@@ -35,7 +35,6 @@ module.exports = {
                     const lastItem = xpaths.template.deleteElementButtonByPosition(count);
                     await this.waitForXpathVisible(lastItem, `The Delete Element Button is not visible`);
                     const nextItem = xpaths.template.deleteElementButtonByPosition(parseInt(count+1))
-                    console.log('------------><><><><><><><><>', nextItem);
                     await this.waitForXpathNotPresent(nextItem, `There is an extra Delete Button on position ${count + 1}`);
                 },
             }
