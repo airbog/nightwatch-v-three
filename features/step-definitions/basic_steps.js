@@ -18,4 +18,8 @@ When(/^I click the Add Element button in the Add Remove Elements page$/, async (
 
 Then(/^the Delete button is visible (\d+) times? in the Add Remove Elements page$/, async (count) => {
     await getBasic().deleteElementButton().verifyCountVisible(count);
-})
+});
+
+When(/^I click the Delete button on position (\d+) in the Add Remove Elements page$/, async (position) => {
+    await getBasic().deleteElementButton().click(position);
+});

@@ -22,7 +22,14 @@ Scenario: Adding and Removing elements in Add Remove Elements page
     Then the Delete button is visible 1 time in the Add Remove Elements page
 
     When I click the Add Element button in the Add Remove Elements page
-      And I wait for 2 seconds
       And I click the Add Element button in the Add Remove Elements page
-        And I wait for 2 seconds
     Then the Delete button is visible 3 times in the Add Remove Elements page
+
+    When I click the Delete button on position 3 in the Add Remove Elements page
+    Then the Delete button is visible 2 times in the Add Remove Elements page
+
+    When I click the Delete button on position 2 in the Add Remove Elements page
+    Then the Delete button is visible 1 time in the Add Remove Elements page
+
+    When I click the Delete button on position 1 in the Add Remove Elements page
+    Then the Delete button is visible 0 times in the Add Remove Elements page
