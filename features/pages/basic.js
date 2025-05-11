@@ -2,7 +2,7 @@ const xpaths = {
     addElementButton: `//div[contains(@class, 'example')]/button[text() = 'Add Element']`,
     deleteElementButton: `//div[contains(@id, 'elements')]/button[text() = 'Delete']`,
     template: {
-        abTestText: (subHeaderText) => `//p[contains(text(), '${subHeaderText}')]`,
+        textElement: (subHeaderText) => `//p[contains(text(), '${subHeaderText}')]`,
         deleteElementButtonByPosition: (count) => `//div[contains(@id, 'elements')]/button[text() = 'Delete'][${count}]`,
     }
 }
@@ -14,7 +14,7 @@ module.exports = {
     commands: [{
         
         async verifyText(text) {
-            const xpath = xpaths.template.abTestText(text)
+            const xpath = xpaths.template.textElement(text)
             await this.waitForXpathVisible(xpath, `The text ${text} is not visible`);
         },
 

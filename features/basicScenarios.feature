@@ -1,11 +1,11 @@
 Feature: Basic assertions and Elements interactions
 
- 
+
   Scenario: AB Testing page
     Given I open Herokuapp homepage page
     When I click the link with text "A/B Testing" in Homepage
     Then the "Split Testing" page contains Header with text "A/B Test"
-      And the AB Testing Page contains text "Also known as split testing."
+      And the element containing text "Also known as split testing." is visible
 
  
   Scenario: Add Remove Elements Page initial State
@@ -33,3 +33,8 @@ Feature: Basic assertions and Elements interactions
 
     When I click the Delete button on position 1 in the Add Remove Elements page
     Then the Delete button is visible 0 times in the Add Remove Elements page
+
+
+  Scenario: Basic Login
+    Given I open the page with authentication
+    Then the element containing text "Congratulations! You must have the proper credentials." is visible

@@ -11,3 +11,8 @@ When(/^I wait for (\d+) seconds$/, async (seconds) => {
 Then(/^the "([^"]*)" page contains Header with text "([^"]*)"$/, async (page, pageHeader) => {
     await getCommon().verifyPageHeader(page, pageHeader);
 });
+
+Given(/^I open the page with authentication$/, async() => {
+    const url = 'https://admin:admin@the-internet.herokuapp.com/basic_auth';
+    await browser.url(url);
+})

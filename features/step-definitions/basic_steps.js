@@ -4,7 +4,7 @@ const getBasic = () => {
     return browser.page.basic();
 };
 
-Then(/^the AB Testing Page contains text "([^"]*)"$/, async (text) => {
+Then(/^the element containing text "([^"]*)" is visible$/, async (text) => {
     await getBasic().verifyText(text);
 });
 
